@@ -1,0 +1,28 @@
+
+
+<html >
+<head>
+ <title>{% block title %}  {% endblock %}</title> </head>
+
+<body>
+    <div > {% block sidebar %} {% endblock %} </div>
+    <div >
+        <div>
+            <b> master </b>
+            {% block nav-global %}
+
+               
+
+            {% endblock %}
+        </div>
+
+        <div >
+            {% block content %}
+
+
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
