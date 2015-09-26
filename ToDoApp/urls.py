@@ -18,7 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
 
-#comment
+#comment ......
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', 'todo.views.list' , name = 'list'),
