@@ -5,6 +5,7 @@ from django.template import *
 
 # Create your views here.
 
+#Read for the todo items
 def list(request):
 	todo_list = ToDo.objects.all()
 	return render_to_response ('todo/list.html' , {'todo_list' : todo_list })
