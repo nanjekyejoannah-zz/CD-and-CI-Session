@@ -1,9 +1,37 @@
-<form  action = 'todo/{{ action }}' method = 'post'>
-
-Title : <input name = 'todo_title' value = {{todo.Title}} > <br/>
-Description :  <input name = 'todo_description' value = {{todo.Description}} > <br/>
-Venue :  <input name = 'todo_Venue ' value = {{todo.Venue }} > <br/>
-Duration : <input name = 'todo_Duration ' value = {{todo.Duration }} > <br/>
 
 
-</form>
+<html lang="en">
+  <head>
+    <!-- Link to the Bootstrap CSS from a CDN -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+          rel="stylesheet">
+  </head>
+
+  <title>{% block title %} home {% endblock %}</title> </head>
+  <body>
+
+	{% include "todo/master.html" %}
+
+  		<div >
+            {% block content %}
+            <h1> yaya </h1>
+
+            <a href="/createTodo"> Create TO </a>
+
+		<form  action = 'todo/{{ action }}' method = 'post'>
+
+		Title : <input name = 'todo_title' value = {{todo.Title}} > <br/>
+		Description :  <input name = 'todo_description' value = {{todo.Description}} > <br/>
+		Venue :  <input name = 'todo_Venue ' value = {{todo.Venue }} > <br/>
+		Duration : <input name = 'todo_Duration ' value = {{todo.Duration }} > <br/>
+
+
+		</form>
+		
+		{% end block %}
+
+        </div>
+
+   </body>
+   </html>
+

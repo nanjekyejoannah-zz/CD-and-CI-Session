@@ -22,5 +22,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', 'todo.views.list' , name = 'list'),
+    url(r'^contact/', 'todo.views.list' , name = 'list'),
     
 ]
