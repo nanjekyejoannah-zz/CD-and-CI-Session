@@ -1,4 +1,4 @@
-from todo.models import *
+from todo.models import  ToDo
 from django.shortcuts import *
 from django.template import *
 
@@ -7,11 +7,11 @@ from django.template import *
 
 def list(request):
 	todo_list = ToDo.objects.all()
-	return render_to_response ('todo/list.html' , {'todolist' : todo_list })
+	return render_to_response ('todo/list.html' , {'todo_list' : todo_list })
 
 
-# def createTodo(request):
-# 	return render_to_response('todo/createTodo.html' , {'action' : 'AddTodo' , 'button' : 'Add'})
+def createTodo(request):
+	return render_to_response('todo/createTodo.html' , {'action' : 'AddTodo' , 'button' : 'Add'})
 
 # def AddTodo(request):
 # 	Title = request.POST ('Title')

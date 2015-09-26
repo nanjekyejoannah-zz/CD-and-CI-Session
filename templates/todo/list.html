@@ -13,19 +13,26 @@
 
   		<div >
             {% block content %}
+            <h1> yaya </h1>
 
-            	<!-- {% foreach item in todolist%}
+            <a href="/create"> Create TO </a>
+
+            {% if todo_list %}
+            	{% for item in todo_list %}
 
             	<ol>
-            		<li> Title : item.Title</li>
-            		<li> Description : item.Description </li>
-            		<li> Venue : item.Venue </li>
-            		<li> Duration : item.Duration </li>
+            		<li> Title : {{ item.Title }} </li>
+            		<li> Description : {{ item.Description}} </li>
+            		<li> Venue : {{item.Venue}} </li>
+            		<li> Duration :{{ item.Duration }} </li>
             	</ol>
 
 
-            	{% endforeach %}
- -->
+            	{% endfor %}
+            {% else %}
+            <p> Nothing to show ..</p>
+            {% endif %}
+
             {% endblock %}
         </div>
 
